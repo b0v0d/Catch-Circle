@@ -75,3 +75,4 @@ def is_fist(hand_landmarks):
    Checking if a fist is clenched.
 
 ### 4. real play video
+<figure class="half">  <a href="link"><img src="https://github.com/b0v0d/Catch-Circle/assets/162780235/5a7e3ba7-7304-48e8-bef0-749bb618a0f6"></a>  <a href="link"><img src="https://github.com/b0v0d/Catch-Circle/assets/162780235/ee1a5c16-370d-4572-be8d-969adf97a20f"></a>
