@@ -4,8 +4,7 @@ catch the circle with your hands!
 ### 1. overview
    use the Mediapipe library to create an interactive game where the player can grab circles with their hand to increase their score. This game will utilize   
    real-time hand tracking to detect when the player's hand interacts with the circles displayed on the screen. The primary objective is to enhance the player's score 
-   by successfully grabbing as many circles as possible within a given time frame. \n
-   **※To use this code, you need to install the Mediapipe library.**
+   by successfully grabbing as many circles as possible within a given time frame.   **※To use this code, you need to install the Mediapipe library.**
 
 ### 2. required library
    mediapipe
@@ -75,4 +74,4 @@ def is_fist(hand_landmarks):
    Checking if a fist is clenched.
 
 ### 4. real play video
-<figure class="half">  <a href="link"><img src="https://github.com/b0v0d/Catch-Circle/assets/162780235/5a7e3ba7-7304-48e8-bef0-749bb618a0f6"></a>  <a href="link"><img src="https://github.com/b0v0d/Catch-Circle/assets/162780235/ee1a5c16-370d-4572-be8d-969adf97a20f"></a>
+<figure class="half">  <a href="link"><img src="https://github.com/b0v0d/Catch-Circle/assets/162780235/ee1a5c16-370d-4572-be8d-969adf97a20f"></a>  <a href="link"><img src="https://github.com/b0v0d/Catch-Circle/assets/162780235/5a7e3ba7-7304-48e8-bef0-749bb618a0f6"></a></figure>
