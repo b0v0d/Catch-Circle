@@ -4,8 +4,8 @@ catch the circle with your hands!
 ### 1. overview
    use the Mediapipe library to create an interactive game where the player can grab circles with their hand to increase their score. This game will utilize   
    real-time hand tracking to detect when the player's hand interacts with the circles displayed on the screen. The primary objective is to enhance the player's score 
-   by successfully grabbing as many circles as possible within a given time frame.
-   ※To use this code, you need to install the Mediapipe library.
+   by successfully grabbing as many circles as possible within a given time frame. \n
+   **※To use this code, you need to install the Mediapipe library.**
 
 ### 2. required library
    mediapipe
@@ -18,7 +18,7 @@ catch the circle with your hands!
    pip install opencv-python
    ```
 
-### 3. detail of code
+### 3. important detail of code
    ``` python
    mp_hands = mp.solutions.hands
    hands = mp_hands.Hands(min_detection_confidence=0.7, min_tracking_confidence=0.7)
@@ -53,3 +53,25 @@ catch the circle with your hands!
                 return True
     return False
    ```
+   checking if a circle is grabbed.
+
+   ``` python
+def is_fist(hand_landmarks):
+    if hand_landmarks:
+        for hand_landmark in hand_landmarks:
+            thumb_tip = hand_landmark.landmark[4]
+            index_tip = hand_landmark.landmark[8]
+            middle_tip = hand_landmark.landmark[12]
+            ring_tip = hand_landmark.landmark[16]
+            pinky_tip = hand_landmark.landmark[20]
+
+            tips = [thumb_tip, index_tip, middle_tip, ring_tip, pinky_tip]
+            tip_positions = [(int(tip.x * 640), int(tip.y * 480)) for tip in tips]
+
+            distances = [((tip_positions[0][0] - tip[0]) ** 2 + (tip_positions[0][1] - tip[1]) ** 2) ** 0.5 for tip in tip_positions[1:]]
+            return all(distance < 50 for distance in distances)  # 모든 손가락 끝이 서로 가까이 모여있는지 확인
+    return False
+   ```
+   Checking if a fist is clenched.
+
+### 4. real play video
