@@ -4,7 +4,7 @@ catch the circle with your hands!
 ### 1. overview
    use the Mediapipe library to create an interactive game where the player can grab circles with their hand to increase their score. This game will utilize   
    real-time hand tracking to detect when the player's hand interacts with the circles displayed on the screen. The primary objective is to enhance the player's score 
-   by successfully grabbing as many circles as possible within a given time frame.   **※To use this code, you need to install the Mediapipe library.**
+   by successfully grabbing as many circles as possible within a given time frame.     **※To use this code, you need to install the Mediapipe library.**
 
 ### 2. required library
    mediapipe
